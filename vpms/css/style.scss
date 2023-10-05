@@ -1,0 +1,300 @@
+// common styling
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+// Background Image Styling
+body {
+  background-size: auto;
+  background: url("../images/parking.jpg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+.wrapper {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: repeat;
+}
+.inner {
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  margin: auto;
+}
+
+// Common form styling
+
+form {
+  background: #fff;
+  border-radius: 5px;
+
+  .input-box {
+    .icon-box {
+      right: 15px;
+      &::before {
+        position: absolute;
+        content: "";
+        height: 38px;
+        background-color: #ced4da;
+        width: 1px;
+        right: 38px;
+      }
+      .icon {
+        background-color: #e1e4e7;
+        height: 38px;
+        width: 38px;
+        display: flex;
+        align-items: center;
+        border-right: 17px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        justify-content: center;
+      }
+    }
+  }
+}
+.btn-close {
+  padding: 0 0;
+  width: 15px;
+  height: 15px;
+}
+
+// Login Page Styling
+.login {
+  .login-bottom{
+    p{
+        white-space: nowrap;
+        margin-left:10px;
+    }
+  }
+}
+
+// Registeration Page
+.inner {
+  margin: 20px;
+}
+
+/********************************* Sidebar and Navbar Styling ********************************/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 280px;
+  background: #48474c;
+
+  .logo-details {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    i {
+      font-size: 30px;
+      color: #fff;
+      padding: 10px;
+    }
+    .logo_name {
+      font-size: 20px;
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+  .logged-in-user {
+    .user-img {
+      width: 35px;
+      margin: 5px;
+    }
+  }
+  .nav-links {
+    height: 100%;
+    overflow: auto;
+    i {
+      font-size: 20px;
+      color: #ddd;
+      padding: 15px;
+      &.fa-angle-left {
+        font-size: 15px;
+      }
+    }
+    li {
+      transition: all 0.4s ease;
+      &:hover {
+        background: #1d1d1e57;
+        cursor: pointer;
+      }
+      &.active {
+        background-color: #007fff;
+      }
+      .sub-menu {
+        background: #1111129e;
+        display: none;
+        padding: 20px 0 20px 20px;
+        li {
+          a {
+            color: #ddd;
+            white-space: nowrap;
+          }
+          i {
+            font-size: 15px;
+            padding: 10px;
+          }
+          &.active {
+            border-top-left-radius: 20px;
+            color: #000;
+            background: #fff;
+            border-bottom-left-radius: 20px;
+            margin-top: 5px;
+            a {
+              color: #000;
+            }
+          }
+        }
+        &.padding {
+          padding-top: 5px;
+        }
+        .link_name {
+          display: none;
+        }
+
+        &.showMenu {
+          display: block;
+        }
+      }
+      &.arrow {
+        transition: all 0.3s ease;
+      }
+      .rotate {
+        transform: rotate(180deg);
+        padding: 15px 15px 15px 5px;
+      }
+      .icon-link {
+        &.bg-color {
+          background: #007fff;
+        }
+      }
+    }
+    .hidden-link {
+      display: none !important;
+    }
+  }
+  .hr-css {
+    color: #fff;
+  }
+  .link-name {
+    color: #ddd;
+  }
+  &.close {
+    .nav-links {
+      overflow: visible;
+      li {
+        position: relative;
+        .sub-menu {
+          position: absolute;
+          left: 100%;
+          top: -10px;
+          margin-top: 0;
+          padding: 10px 20px;
+          border-radius: 0 6px 6px 0;
+          transition: all 0.4s ease;
+        }
+      }
+    }
+    & ~ .home-section {
+      left: 45px;
+      width: calc(100% - 45px);
+    }
+  }
+}
+
+//   Home Section
+
+.home-section {
+  position: relative;
+  background: #fff;
+  left: 280px;
+  width: calc(100% - 280px);
+  height: 100vh;
+  transition: all 0.5s ease;
+  .home-content {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(208, 74, 74);
+    .menu-bar {
+      margin: 10px 15px;
+      font-size: 25px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .content-box {
+    padding: 20px;
+  }
+}
+
+.card-box {
+  .card {
+    width: 265px;
+    margin: 0 5px;
+    position: relative;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    .icon-box {
+      position: absolute;
+      right: 16px;
+      top: 8px;
+      font-size: 60px;
+    }
+    &.booking {
+      background: #c2d6ea;
+    }
+  }
+  .booking {
+  }
+}
+// Media Queries
+@media only screen and (max-width: 768px) {
+  // Registeration Page
+  .inner {
+    display: block;
+    margin: 30px;
+  }
+}
+@media only screen and (min-width: 2500px) {
+  body {
+    background-size: 100% 100%;
+  }
+}
